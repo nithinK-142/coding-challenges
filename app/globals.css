@@ -78,6 +78,8 @@ p {
 label {
   font-size: 1.2em;
   margin-right: 1rem;
+  padding-left: .5rem;
+  cursor: pointer;
 }
 
 button {
@@ -89,6 +91,11 @@ button {
   border: 2px solid purple;
   color: white;
   margin-inline: auto;
+  cursor: pointer;
+}
+
+.retry {
+  border: 2px solid green;
 }
 
 h3 {

@@ -11,18 +11,27 @@ const Quiz: React.FC<QuizProps> = ({ questions }) => {
   const currentQuestion = questions[currentQuestionIndex];
   const isGameOver = currentQuestionIndex >= questions.length;
   const wrongAnswers = questions.length - score;
+
+  const handleRetry = () => {
+    setScore(0);
+    setCurrentQuestionIndex(0);
+  }
+
   return (
     <div className="quiz">
       {isGameOver ? (
         <>
-        <div className="game-over flex">
-          <h2>Game Over</h2>
-          <h3>Your Score is {score} and wrong answers {wrongAnswers}.</h3>
-          <button>Retry</button></div>
+          <div className="game-over flex">
+            <h2>Game Over</h2>
+            <h3>
+              Your Score is {score} and wrong answers {wrongAnswers}.
+            </h3>
+            <button className="retry" onClick={handleRetry}>Retry</button>
+          </div>
         </>
       ) : (
         <form
-        className="flex"
+          className="flex"
           onSubmit={(e) => {
             e.preventDefault();
             if (selectedAnswer === currentQuestion.correctAnswer)
