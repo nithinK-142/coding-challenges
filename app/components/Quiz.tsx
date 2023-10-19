@@ -51,6 +51,7 @@ const Quiz: React.FC<QuizProps> = ({ questions }) => {
                     onChange={() => setSelectedAnswer(answer)}
                     type="radio"
                     name="answer"
+                    required
                   ></input>
                   {answer}
                 </label>
