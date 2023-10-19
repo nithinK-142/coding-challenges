@@ -78,7 +78,7 @@ p {
 label {
   font-size: 1.2em;
   margin-right: 1rem;
-  padding-left: .5rem;
+  padding-left: 0.5rem;
   cursor: pointer;
 }
 
@@ -94,10 +94,37 @@ button {
   cursor: pointer;
 }
 
-.retry {
-  border: 2px solid green;
+/* radio size increase
+input[type="radio"] {
+  width: 100%;
+  height: 2em;
+} */
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+
+  border: 2px solid #999;
+  transition: 0.2s all linear;
+  margin-right: 4px;
+
+  position: relative;
+}
+
+input:checked {
+  border: 6px solid darkseagreen;
+  outline: unset !important;
 }
 
 h3 {
   padding-top: 1rem;
+}
+
+span {
+  font-weight: 400;
 }

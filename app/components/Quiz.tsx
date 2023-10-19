@@ -15,7 +15,7 @@ const Quiz: React.FC<QuizProps> = ({ questions }) => {
   const handleRetry = () => {
     setScore(0);
     setCurrentQuestionIndex(0);
-  }
+  };
 
   return (
     <div className="quiz">
@@ -24,9 +24,12 @@ const Quiz: React.FC<QuizProps> = ({ questions }) => {
           <div className="game-over flex">
             <h2>Game Over</h2>
             <h3>
-              Your Score is {score} and wrong answers {wrongAnswers}.
+              Your Score is <span>{score}</span> and wrong answers{" "}
+              <span>{wrongAnswers}</span>.
             </h3>
-            <button className="retry" onClick={handleRetry}>Retry</button>
+            <button className="retry" onClick={handleRetry}>
+              Retry
+            </button>
           </div>
         </>
       ) : (
