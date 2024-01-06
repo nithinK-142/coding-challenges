@@ -1,3 +1,144 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  padding: 2rem;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+h3 {
+  font-weight: 300;
+}
+.quiz {
+  background-color: #212121;
+  border-radius: 8px;
+  max-width: 60vw;
+  margin: 2rem auto;
+  padding: 2rem;
+  position: relative;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p {
+  font-size: 2em;
+}
+
+.answers {
+  padding-top: 1rem;
+}
+
+label {
+  font-size: 1.2em;
+  margin-right: 1rem;
+  padding-left: 0.5rem;
+  cursor: pointer;
+}
+
+button {
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-top: 2rem;
+  background-color: black;
+  border: 2px solid purple;
+  color: white;
+  margin-inline: auto;
+  cursor: pointer;
+}
+
+/* radio size increase
+input[type="radio"] {
+  width: 100%;
+  height: 2em;
+} */
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+
+  border: 2px solid #999;
+  transition: 0.2s all linear;
+  margin-right: 4px;
+
+  position: relative;
+}
+
+input:checked {
+  border: 6px solid darkseagreen;
+  outline: unset !important;
+}
+
+h3 {
+  padding-top: 1rem;
+}
+
+span {
+  font-weight: 400;
+}
+
+.selected {
+  background-color: #09bfff;
+  opacity: 0.8;
+}
