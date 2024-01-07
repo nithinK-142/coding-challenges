@@ -40,3 +40,11 @@ export const quizData = [
     ],
   },
 ];
+
+type CountryCapitalType = {
+  [key: string]: string;
+}
+export const countryCapitalData: CountryCapitalType = {
+  Germany: "Berlin",
+  Azerbaijan: "Baku",
+};
