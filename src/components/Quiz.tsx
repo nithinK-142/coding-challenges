@@ -33,7 +33,7 @@ const Quiz: React.FC<QuizProps> = ({ questions }) => {
         </>
       ) : (
         <form
-          className="flex"
+          className="flex-center"
           onSubmit={(e) => {
             e.preventDefault();
             if (selectedAnswer === currentQuestion.correctAnswer)
