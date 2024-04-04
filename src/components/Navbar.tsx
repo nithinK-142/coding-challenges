@@ -7,9 +7,10 @@ const Navbar: React.FC = () => {
     { label: "CountryCapital", link: "/coding-challenges/country-capital" },
     { label: "DetectScroll", link: "/coding-challenges/detect-scroll" },
     { label: "Quiz", link: "/coding-challenges/quiz" },
+    { label: "TrafficLights", link: "/coding-challenges/traffic-lights" },
   ];
   return (
-    <nav className="flex justify-center p-3 bg-gray-600 sm:px-6 lg:px-8">
+    <nav className="flex justify-center p-3 mb-10 bg-gray-600 sm:px-6 lg:px-8">
       <div className="flex space-x-4">
         {navs.map(({ label, link }) => (
           <Link

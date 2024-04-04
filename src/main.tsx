@@ -13,6 +13,7 @@ import CountryCapital from "./components/CountryCapital.tsx";
 import DetectScroll from "./components/DetectScroll.tsx";
 import { countryCapitalData, quizData } from "./data/game-data.ts";
 import Quiz from "./components/Quiz.tsx";
+import TrafficLights from "./components/TrafficLights.tsx";
 
 const routes = (
   <Route path="/coding-challenges" element={<App />}>
@@ -23,6 +24,7 @@ const routes = (
     />
     <Route path="detect-scroll" element={<DetectScroll />} />
     <Route path="quiz" element={<Quiz questions={quizData} />} />
+    <Route path="traffic-lights" element={<TrafficLights />} />
     <Route path="*" element={<div>Error</div>} />
   </Route>
 );
