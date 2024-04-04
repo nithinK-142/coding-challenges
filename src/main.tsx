@@ -15,6 +15,7 @@ import { countryCapitalData, quizData } from "./data/game-data.ts";
 import Quiz from "./components/Quiz.tsx";
 import TrafficLights from "./components/TrafficLights.tsx";
 import Explorer from "./components/Explorer.tsx";
+import Accordion from "./components/Accordion.tsx";
 
 const routes = (
   <Route path="/coding-challenges" element={<App />}>
@@ -27,6 +28,7 @@ const routes = (
     <Route path="quiz" element={<Quiz questions={quizData} />} />
     <Route path="traffic-lights" element={<TrafficLights />} />
     <Route path="explorer" element={<Explorer />} />
+    <Route path="accordion" element={<Accordion />} />
     <Route path="*" element={<div>Error</div>} />
   </Route>
 );
