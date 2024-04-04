@@ -3,6 +3,7 @@ import Quiz from "@/components/Quiz";
 import { quizData } from "@/data/game-data";
 import CountryCapitalGame from "@/components/CountryCapital";
 import { countryCapitalData } from "@/data/game-data";
+import DetectScroll from "./components/DetectScroll";
 
 type GameType = "quiz" | "countryCapital";
 
@@ -15,8 +16,19 @@ function App() {
 
   return (
     <main>
-      <h1 className="text-center">Game Selector</h1>
-      <div className="mb-4 space-x-2 text-center">
+      {/* <h1 className="text-center">Game Selector</h1> */}
+      <DetectScroll />
+      <DetectScroll />
+      <DetectScroll />
+      <DetectScroll />
+      <DetectScroll />
+      <DetectScroll />
+      <DetectScroll />
+      <DetectScroll />
+      <DetectScroll />
+      <DetectScroll />
+      <DetectScroll />
+      {/* <div className="mb-4 space-x-2 text-center">
         <button onClick={() => handleGameChange("quiz")}>Quiz</button>
         <button onClick={() => handleGameChange("countryCapital")}>
           Country Capital
@@ -35,7 +47,7 @@ function App() {
           <h1 className="text-center">Country Capital Matching Game</h1>
           <CountryCapitalGame data={countryCapitalData} />
         </>
-      )}
+      )} */}
     </main>
   );
 }
