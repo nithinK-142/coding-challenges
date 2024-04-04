@@ -1,3 +1,4 @@
+import "@/styles/CountryCapital.css";
 import { useState } from "react";
 
 type ButtonState = "DEFAULT" | "SELECTED" | "WRONG";
