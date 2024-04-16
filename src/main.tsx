@@ -17,6 +17,7 @@ import TrafficLights from "./components/TrafficLights.tsx";
 import Explorer from "./components/Explorer.tsx";
 import Accordion from "./components/Accordion.tsx";
 import MovingBlock from "./components/MovingBlock.tsx";
+import Timer from "./components/Timer.tsx";
 
 const routes = (
   <Route path="/coding-challenges" element={<App />}>
@@ -31,6 +32,7 @@ const routes = (
     <Route path="explorer" element={<Explorer />} />
     <Route path="accordion" element={<Accordion />} />
     <Route path="moving-block" element={<MovingBlock />} />
+    <Route path="timer" element={<Timer />} />
     <Route path="*" element={<div>Error</div>} />
   </Route>
 );
