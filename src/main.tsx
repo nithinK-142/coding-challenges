@@ -16,6 +16,7 @@ import Quiz from "./components/Quiz.tsx";
 import TrafficLights from "./components/TrafficLights.tsx";
 import Explorer from "./components/Explorer.tsx";
 import Accordion from "./components/Accordion.tsx";
+import MovingBlock from "./components/MovingBlock.tsx";
 
 const routes = (
   <Route path="/coding-challenges" element={<App />}>
@@ -29,6 +30,7 @@ const routes = (
     <Route path="traffic-lights" element={<TrafficLights />} />
     <Route path="explorer" element={<Explorer />} />
     <Route path="accordion" element={<Accordion />} />
+    <Route path="moving-block" element={<MovingBlock />} />
     <Route path="*" element={<div>Error</div>} />
   </Route>
 );

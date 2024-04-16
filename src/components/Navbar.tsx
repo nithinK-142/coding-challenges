@@ -10,6 +10,7 @@ const Navbar: React.FC = () => {
     { label: "TrafficLights", link: "/coding-challenges/traffic-lights" },
     { label: "Explorer", link: "/coding-challenges/explorer" },
     { label: "Accordion", link: "/coding-challenges/accordion" },
+    { label: "MovingBlock", link: "/coding-challenges/moving-block" },
   ];
   return (
     <nav className="flex justify-center p-3 mb-10 bg-gray-600 sm:px-6 lg:px-8">

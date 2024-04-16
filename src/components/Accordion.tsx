@@ -1,4 +1,3 @@
-import "@/styles/Accordion.css";
 import React, { useState } from "react";
 import { FaAngleUp, FaAngleDown } from "react-icons/fa";
 
