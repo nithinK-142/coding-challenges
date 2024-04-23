@@ -64,7 +64,7 @@ input[type="radio"] {
   height: 2em;
 } */
 
-input {
+input[type="radio"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -80,7 +80,7 @@ input {
   position: relative;
 }
 
-input:checked {
+input[type="radio"]:checked {
   border: 6px solid darkseagreen;
   outline: unset !important;
 }
