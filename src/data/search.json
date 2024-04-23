@@ -1,0 +1,25 @@
+[
+  {
+    "title": "The Great Gatsby",
+    "tags": ["classic", "fiction", "novel"],
+    "description": "A novel by F. Scott Fitzgerald, depicting the lavish lifestyle of the wealthy on Long Island in the 1920s."
+  },
+
+  {
+    "title": "Mastering Python",
+    "tags": ["programming", "python", "tutorial"],
+    "description": "A comprehensive guide to learning and mastering the Python programming language, suitable for beginners and experienced developers alike."
+  },
+
+  {
+    "title": "Healthy Meal Prep",
+    "tags": ["cooking", "recipes", "meal-prep"],
+    "description": "A collection of easy and nutritious meal prep recipes to help you stay on track with your healthy eating goals throughout the week."
+  },
+
+  {
+    "title": "Sunset Over the City",
+    "tags": ["photography", "landscape", "urban"],
+    "description": "A stunning photograph capturing the vibrant colors of a sunset over a bustling city skyline."
+  }
+]

@@ -18,6 +18,8 @@ import Explorer from "./components/Explorer.tsx";
 import Accordion from "./components/Accordion.tsx";
 import MovingBlock from "./components/MovingBlock.tsx";
 import Timer from "./components/Timer.tsx";
+import Search from "./components/Search.tsx";
+import searchData from "./data/search.json";
 
 const routes = (
   <Route path="/coding-challenges" element={<App />}>
@@ -33,6 +35,7 @@ const routes = (
     <Route path="accordion" element={<Accordion />} />
     <Route path="moving-block" element={<MovingBlock />} />
     <Route path="timer" element={<Timer />} />
+    <Route path="search" element={<Search data={searchData} />} />
     <Route path="*" element={<div>Error</div>} />
   </Route>
 );
