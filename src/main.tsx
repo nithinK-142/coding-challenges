@@ -25,6 +25,7 @@ import LocationSwap from "./components/LocationSwap.tsx";
 import locationData from "./data/locations.json";
 import SearchFruits from "./components/SearchFruits.tsx";
 import Debouncing from "./components/Debouncing.tsx";
+import NumberFormat from "./components/NumberFormat.tsx";
 
 const routes = (
   <Route path="/coding-challenges" element={<App />}>
@@ -43,6 +44,7 @@ const routes = (
     <Route path="search" element={<Search data={searchData} />} />
     <Route path="search-fruits" element={<SearchFruits data={fruits} />} />
     <Route path="debouncing" element={<Debouncing />} />
+    <Route path="number-format" element={<NumberFormat />} />
     <Route
       path="location-swap"
       element={<LocationSwap data={locationData} />}
