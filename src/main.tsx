@@ -20,6 +20,8 @@ import MovingBlock from "./components/MovingBlock.tsx";
 import Timer from "./components/Timer.tsx";
 import Search from "./components/Search.tsx";
 import searchData from "./data/search.json";
+import LocationSwap from "./components/LocationSwap.tsx";
+import locationData from "./data/locations.json";
 
 const routes = (
   <Route path="/coding-challenges" element={<App />}>
@@ -36,6 +38,10 @@ const routes = (
     <Route path="moving-block" element={<MovingBlock />} />
     <Route path="timer" element={<Timer />} />
     <Route path="search" element={<Search data={searchData} />} />
+    <Route
+      path="location-swap"
+      element={<LocationSwap data={locationData} />}
+    />
     <Route path="*" element={<div>Error</div>} />
   </Route>
 );
