@@ -8,20 +8,18 @@ type NavigationProps = {
 const LocationSwap: React.FC<NavigationProps> = ({ data }) => {
   const [locations, setLocations] = useState(data);
 
-  const handleMoveUp = (index: number) => {
-    if (index < 0) return;
+  const handleMove = (index: number, direction: "up" | "down") => {
+    if (
+      (direction === "up" && index === 0) ||
+      (direction === "down" && index === locations.length - 1)
+    ) {
+      return;
+    }
+
     const newLocations = [...locations];
     const temp = newLocations[index];
-    newLocations[index] = newLocations[index - 1];
-    newLocations[index - 1] = temp;
-    setLocations(newLocations);
-  };
-  const handleMoveDown = (index: number) => {
-    if (index >= locations.length) return;
-    const newLocations = [...locations];
-    const temp = newLocations[index];
-    newLocations[index] = newLocations[index + 1];
-    newLocations[index + 1] = temp;
+    newLocations[index] = newLocations[index + (direction === "up" ? -1 : 1)];
+    newLocations[index + (direction === "up" ? -1 : 1)] = temp;
     setLocations(newLocations);
   };
 
@@ -34,13 +32,13 @@ const LocationSwap: React.FC<NavigationProps> = ({ data }) => {
             {index !== locations.length - 1 && (
               <FaAngleDoubleDown
                 className="w-10 h-10 cursor-pointer"
-                onClick={() => handleMoveDown(index)}
+                onClick={() => handleMove(index, "down")}
               />
             )}
             {index !== 0 && (
               <FaAngleDoubleUp
                 className="w-10 h-10 cursor-pointer"
-                onClick={() => handleMoveUp(index)}
+                onClick={() => handleMove(index, "up")}
               />
             )}
           </div>
