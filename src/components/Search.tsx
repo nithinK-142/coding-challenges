@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 
 type SearchData = {
   title: string;
@@ -38,16 +38,16 @@ const Search: React.FC<SearchProps> = ({ data }) => {
         />
       </div>
       <ul>
-        {items.map((item) => (
-          <>
+        {items.map((item, index) => (
+          <Fragment key={index}>
             <li>{item.title}</li>
             <li>
-              {item.tags.map((tag) => (
-                <span>{tag}, </span>
+              {item.tags.map((tag, index) => (
+                <span key={index}>{tag}, </span>
               ))}
             </li>
             <li>{item.description}</li>
-          </>
+          </Fragment>
         ))}
       </ul>
     </div>
