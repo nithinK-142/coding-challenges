@@ -25,6 +25,7 @@ const Search: React.FC<SearchProps> = ({ data }) => {
     });
 
     return text ? setItems(filteredData) : setItems(data);
+    // setItems(filteredData);
   }, [data, text]);
 
   return (
