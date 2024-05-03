@@ -26,8 +26,8 @@ const SearchFruits: React.FC<SearchProps> = ({ data }) => {
         />
       </div>
       <ul>
-        {fruits.map((fruit) => (
-          <li>{fruit}</li>
+        {fruits.map((fruit, index) => (
+          <li key={index}>{fruit}</li>
         ))}
       </ul>
     </div>
