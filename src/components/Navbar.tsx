@@ -15,6 +15,7 @@ const Navbar: React.FC = () => {
     { label: "Search", link: "/coding-challenges/search" },
     { label: "Search Fruits", link: "/coding-challenges/search-fruits" },
     { label: "LocationSwap", link: "/coding-challenges/location-swap" },
+    { label: "Debouncing", link: "/coding-challenges/debouncing" },
   ];
   return (
     <nav className="flex justify-center p-3 mb-10 bg-gray-600 sm:px-6 lg:px-8">
