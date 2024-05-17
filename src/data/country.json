@@ -1,0 +1,176 @@
+{
+  "cities": {
+    "New York": {
+      "state": "New York",
+      "country": "United States"
+    },
+    "Los Angeles": {
+      "state": "California",
+      "country": "United States"
+    },
+    "Chicago": {
+      "state": "Illinois",
+      "country": "United States"
+    },
+    "Houston": {
+      "state": "Texas",
+      "country": "United States"
+    },
+    "Phoenix": {
+      "state": "Arizona",
+      "country": "United States"
+    },
+    "Toronto": {
+      "state": "Ontario",
+      "country": "Canada"
+    },
+    "Vancouver": {
+      "state": "British Columbia",
+      "country": "Canada"
+    },
+    "Montreal": {
+      "state": "Quebec",
+      "country": "Canada"
+    },
+    "Calgary": {
+      "state": "Alberta",
+      "country": "Canada"
+    },
+    "Ottawa": {
+      "state": "Ontario",
+      "country": "Canada"
+    },
+    "London": {
+      "state": "England",
+      "country": "United Kingdom"
+    },
+    "Birmingham": {
+      "state": "England",
+      "country": "United Kingdom"
+    },
+    "Manchester": {
+      "state": "England",
+      "country": "United Kingdom"
+    },
+    "Edinburgh": {
+      "state": "Scotland",
+      "country": "United Kingdom"
+    },
+    "Glasgow": {
+      "state": "Scotland",
+      "country": "United Kingdom"
+    },
+    "Sydney": {
+      "state": "New South Wales",
+      "country": "Australia"
+    },
+    "Melbourne": {
+      "state": "Victoria",
+      "country": "Australia"
+    },
+    "Brisbane": {
+      "state": "Queensland",
+      "country": "Australia"
+    },
+    "Perth": {
+      "state": "Western Australia",
+      "country": "Australia"
+    },
+    "Adelaide": {
+      "state": "South Australia",
+      "country": "Australia"
+    },
+    "Berlin": {
+      "state": "Berlin",
+      "country": "Germany"
+    },
+    "Munich": {
+      "state": "Bavaria",
+      "country": "Germany"
+    },
+    "Hamburg": {
+      "state": "Hamburg",
+      "country": "Germany"
+    },
+    "Cologne": {
+      "state": "North Rhine-Westphalia",
+      "country": "Germany"
+    },
+    "Frankfurt": {
+      "state": "Hesse",
+      "country": "Germany"
+    }
+  },
+  "states": {
+    "New York": {
+      "country": "United States"
+    },
+    "California": {
+      "country": "United States"
+    },
+    "Illinois": {
+      "country": "United States"
+    },
+    "Texas": {
+      "country": "United States"
+    },
+    "Arizona": {
+      "country": "United States"
+    },
+    "Ontario": {
+      "country": "Canada"
+    },
+    "British Columbia": {
+      "country": "Canada"
+    },
+    "Quebec": {
+      "country": "Canada"
+    },
+    "Alberta": {
+      "country": "Canada"
+    },
+    "England": {
+      "country": "United Kingdom"
+    },
+    "Scotland": {
+      "country": "United Kingdom"
+    },
+    "New South Wales": {
+      "country": "Australia"
+    },
+    "Victoria": {
+      "country": "Australia"
+    },
+    "Queensland": {
+      "country": "Australia"
+    },
+    "Western Australia": {
+      "country": "Australia"
+    },
+    "South Australia": {
+      "country": "Australia"
+    },
+    "Berlin": {
+      "country": "Germany"
+    },
+    "Bavaria": {
+      "country": "Germany"
+    },
+    "Hamburg": {
+      "country": "Germany"
+    },
+    "North Rhine-Westphalia": {
+      "country": "Germany"
+    },
+    "Hesse": {
+      "country": "Germany"
+    }
+  },
+  "countries": {
+    "United States": {},
+    "Canada": {},
+    "United Kingdom": {},
+    "Australia": {},
+    "Germany": {}
+  }
+}
