@@ -18,6 +18,7 @@ const Navbar: React.FC = () => {
     { label: "Debouncing", link: "/coding-challenges/debouncing" },
     { label: "NumberFormat", link: "/coding-challenges/number-format" },
     { label: "Dropdown", link: "/coding-challenges/dropdown" },
+    { label: "Pagination", link: "/coding-challenges/pagination" },
   ];
   return (
     <nav className="flex justify-center p-3 mb-10 bg-gray-600 sm:px-6 lg:px-8">

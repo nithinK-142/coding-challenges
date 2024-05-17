@@ -28,6 +28,7 @@ import Debouncing from "./components/Debouncing.tsx";
 import NumberFormat from "./components/NumberFormat.tsx";
 import Dropdown from "./components/Dropdown.tsx";
 import dropdown from "./data/country.json";
+import Pagination from "./components/Pagination.tsx";
 
 const routes = (
   <Route path="/coding-challenges" element={<App />}>
@@ -48,6 +49,7 @@ const routes = (
     <Route path="debouncing" element={<Debouncing />} />
     <Route path="number-format" element={<NumberFormat />} />
     <Route path="dropdown" element={<Dropdown data={dropdown} />} />
+    <Route path="pagination" element={<Pagination />} />
     <Route
       path="location-swap"
       element={<LocationSwap data={locationData} />}
