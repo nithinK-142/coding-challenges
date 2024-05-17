@@ -29,6 +29,7 @@ import NumberFormat from "./components/NumberFormat.tsx";
 import Dropdown from "./components/Dropdown.tsx";
 import dropdown from "./data/country.json";
 import Pagination from "./components/Pagination.tsx";
+import Football from "./components/Football.tsx";
 
 const routes = (
   <Route path="/coding-challenges" element={<App />}>
@@ -50,6 +51,7 @@ const routes = (
     <Route path="number-format" element={<NumberFormat />} />
     <Route path="dropdown" element={<Dropdown data={dropdown} />} />
     <Route path="pagination" element={<Pagination />} />
+    <Route path="football" element={<Football />} />
     <Route
       path="location-swap"
       element={<LocationSwap data={locationData} />}
