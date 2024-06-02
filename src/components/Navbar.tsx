@@ -20,6 +20,7 @@ const Navbar: React.FC = () => {
     { label: "Dropdown", link: "/coding-challenges/dropdown" },
     { label: "Pagination", link: "/coding-challenges/pagination" },
     { label: "Football", link: "/coding-challenges/football" },
+    { label: "NasaImages", link: "/coding-challenges/nasa-images" },
   ];
 
   return (
