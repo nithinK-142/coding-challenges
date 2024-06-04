@@ -21,6 +21,7 @@ const Navbar: React.FC = () => {
     { label: "Pagination", link: "/coding-challenges/pagination" },
     { label: "Football", link: "/coding-challenges/football" },
     { label: "NasaImages", link: "/coding-challenges/nasa-images" },
+    { label: "RunEffectOnce", link: "/coding-challenges/runeffectonce" },
   ];
 
   return (
