@@ -2,15 +2,13 @@ import { useEffect, useState } from "react";
 
 const useFetchUsers = (url: string) => {
   const [loading, setLoading] = useState(false);
-  const [users, setUsers] = useState();
+  const [users, setUsers] = useState([]);
 
   const getUsers = async () => {
     try {
       setLoading(true);
-      console.log(url);
       const response = await fetch(url);
       const result = await response.json();
-      console.log(result);
       setUsers(result);
     } catch (error) {
       console.log(error);
@@ -37,8 +35,8 @@ const CustomFetchHook = () => {
 
       {users && (
         <div>
-          {users.map((user) => (
-            <p>{user.name}</p>
+          {users.map(({ name }) => (
+            <p key={name}>{name}</p>
           ))}
         </div>
       )}
