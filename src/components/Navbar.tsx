@@ -23,6 +23,7 @@ const Navbar: React.FC = () => {
     { label: "NasaImages", link: "/coding-challenges/nasa-images" },
     { label: "RunEffectOnce", link: "/coding-challenges/runeffectonce" },
     { label: "CustomFetchHook", link: "/coding-challenges/customfetchhook" },
+    { label: "ClientToChild", link: "/coding-challenges/childtoparent" },
   ];
 
   return (

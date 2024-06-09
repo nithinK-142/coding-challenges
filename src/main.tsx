@@ -33,6 +33,7 @@ import Football from "./components/Football.tsx";
 import NasaImages from "./components/NasaImages.tsx";
 import RunEffectOnce from "./components/RunEffectOnce.tsx";
 import CustomFetchHook from "./components/CustomFetchHook.tsx";
+import ChildToParent from "./components/ChildToParent.tsx";
 
 const routes = (
   <Route path="/coding-challenges" element={<App />}>
@@ -58,6 +59,7 @@ const routes = (
     <Route path="nasa-images" element={<NasaImages />} />
     <Route path="runeffectonce" element={<RunEffectOnce />} />
     <Route path="customfetchhook" element={<CustomFetchHook />} />
+    <Route path="childtoparent" element={<ChildToParent />} />
     <Route
       path="location-swap"
       element={<LocationSwap data={locationData} />}
