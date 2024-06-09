@@ -32,6 +32,7 @@ import Pagination from "./components/Pagination.tsx";
 import Football from "./components/Football.tsx";
 import NasaImages from "./components/NasaImages.tsx";
 import RunEffectOnce from "./components/RunEffectOnce.tsx";
+import CustomFetchHook from "./components/CustomFetchHook.tsx";
 
 const routes = (
   <Route path="/coding-challenges" element={<App />}>
@@ -56,6 +57,7 @@ const routes = (
     <Route path="football" element={<Football />} />
     <Route path="nasa-images" element={<NasaImages />} />
     <Route path="runeffectonce" element={<RunEffectOnce />} />
+    <Route path="customfetchhook" element={<CustomFetchHook />} />
     <Route
       path="location-swap"
       element={<LocationSwap data={locationData} />}
