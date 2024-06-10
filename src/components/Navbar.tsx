@@ -24,6 +24,7 @@ const Navbar: React.FC = () => {
     { label: "RunEffectOnce", link: "/coding-challenges/runeffectonce" },
     { label: "CustomFetchHook", link: "/coding-challenges/customfetchhook" },
     { label: "ClientToChild", link: "/coding-challenges/childtoparent" },
+    { label: "TodoTable", link: "/coding-challenges/todo-table" },
   ];
 
   return (

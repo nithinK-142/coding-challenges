@@ -34,6 +34,7 @@ import NasaImages from "./components/NasaImages.tsx";
 import RunEffectOnce from "./components/RunEffectOnce.tsx";
 import CustomFetchHook from "./components/CustomFetchHook.tsx";
 import ChildToParent from "./components/ChildToParent.tsx";
+import TodoTable from "./components/TodoTable.tsx";
 
 const routes = (
   <Route path="/coding-challenges" element={<App />}>
@@ -60,6 +61,7 @@ const routes = (
     <Route path="runeffectonce" element={<RunEffectOnce />} />
     <Route path="customfetchhook" element={<CustomFetchHook />} />
     <Route path="childtoparent" element={<ChildToParent />} />
+    <Route path="todo-table" element={<TodoTable />} />
     <Route
       path="location-swap"
       element={<LocationSwap data={locationData} />}
