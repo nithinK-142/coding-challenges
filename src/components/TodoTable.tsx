@@ -10,8 +10,11 @@ type Todo = {
 const TodoTable = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
   const [text, setText] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(false);
   const API_URL = "https://jsonplaceholder.typicode.com/todos";
+
+  const booleanToString = (value: boolean) => (value ? "true" : "false");
 
   const fetchTodos = async () => {
     try {
@@ -31,7 +34,12 @@ const TodoTable = () => {
     text ? todo.title.toLowerCase().includes(text.toLowerCase()) : []
   );
 
-  const booleanToString = (value: boolean) => (value ? "true" : "false");
+  const todosPerPage = 10;
+  const totalPages = Math.ceil(filteredTodos.length / todosPerPage);
+  const paginatedTodos = filteredTodos.slice(
+    (currentPage - 1) * todosPerPage,
+    todosPerPage * currentPage
+  );
 
   useEffect(() => {
     fetchTodos();
@@ -57,7 +65,7 @@ const TodoTable = () => {
             </tr>
           </thead>
           <tbody>
-            {filteredTodos.map(({ userId, id, title, completed }) => (
+            {paginatedTodos.map(({ userId, id, title, completed }) => (
               <tr className="text-center" key={id}>
                 <td>{userId}</td>
                 <td>{id}</td>
@@ -81,6 +89,13 @@ const TodoTable = () => {
       ) : (
         <p className="text-center">loading...</p>
       )}
+      <div className="flex flex-wrap w-3/4 gap-2 mx-auto">
+        {Array.from({ length: totalPages }, (_, index) => (
+          <button key={index} onClick={() => setCurrentPage(index + 1)}>
+            {index + 1}
+          </button>
+        ))}
+      </div>
     </div>
   );
 };
