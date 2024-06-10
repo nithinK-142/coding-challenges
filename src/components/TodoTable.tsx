@@ -9,31 +9,43 @@ type Todo = {
 
 const TodoTable = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
+  const [text, setText] = useState("");
   const [loading, setLoading] = useState(false);
+  const API_URL = "https://jsonplaceholder.typicode.com/todos";
 
-  useEffect(() => {
-    const fetchTodos = async () => {
-      try {
-        setLoading(true);
-        const response = await fetch(
-          "https://jsonplaceholder.typicode.com/todos"
-        );
-        const result = await response.json();
-        setTodos(result);
-        setLoading(false);
-      } catch (error) {
-        console.log(error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchTodos();
-  }, []);
+  const fetchTodos = async () => {
+    try {
+      setLoading(true);
+      const response = await fetch(API_URL);
+      const result = (await response.json()) as Todo[];
+      setTodos(result);
+      setLoading(false);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const filteredTodos = todos.filter((todo) =>
+    text ? todo.title.toLowerCase().includes(text.toLowerCase()) : []
+  );
 
   const booleanToString = (value: boolean) => (value ? "true" : "false");
 
+  useEffect(() => {
+    fetchTodos();
+  }, []);
+
   return (
     <div className="flex flex-col justify-center">
+      <input
+        type="text"
+        placeholder="Search by title"
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        className="w-1/2 px-4 py-2 mx-auto my-6 text-black rounded-md"
+      />
       {!loading ? (
         <table>
           <thead>
@@ -45,7 +57,7 @@ const TodoTable = () => {
             </tr>
           </thead>
           <tbody>
-            {todos.map(({ userId, id, title, completed }) => (
+            {filteredTodos.map(({ userId, id, title, completed }) => (
               <tr className="text-center" key={id}>
                 <td>{userId}</td>
                 <td>{id}</td>
