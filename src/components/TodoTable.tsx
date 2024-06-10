@@ -8,13 +8,14 @@ type Todo = {
 };
 
 const TodoTable = () => {
+  const [loading, setLoading] = useState(false);
   const [todos, setTodos] = useState<Todo[]>([]);
   const [text, setText] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const [loading, setLoading] = useState(false);
+  const [todoId, setTodoId] = useState<number>(0);
+  const [todoTitle, setTodoTitle] = useState("");
+  const [todoCompleted, setTodoCompleted] = useState(false);
   const API_URL = "https://jsonplaceholder.typicode.com/todos";
-
-  const booleanToString = (value: boolean) => (value ? "true" : "false");
 
   const fetchTodos = async () => {
     try {
@@ -41,6 +42,22 @@ const TodoTable = () => {
     todosPerPage * currentPage
   );
 
+  const handleEdit = (todo: Todo) => {
+    setTodoId(todo.id);
+    setTodoTitle(todo.title);
+    setTodoCompleted(todo.completed);
+  };
+
+  const handleDone = (id: number) => {
+    setTodos((prevTodos) =>
+      prevTodos.map((todo) =>
+        todo.id === id
+          ? { ...todo, title: todoTitle, completed: todoCompleted }
+          : todo
+      )
+    );
+    setTodoId(0);
+  };
   useEffect(() => {
     fetchTodos();
   }, []);
@@ -69,18 +86,51 @@ const TodoTable = () => {
               <tr className="text-center" key={id}>
                 <td>{userId}</td>
                 <td>{id}</td>
-                <td>{title}</td>
                 <td>
-                  <select
-                    value={booleanToString(completed)}
-                    className="text-black"
-                  >
-                    <option value={booleanToString(true)}>Yes</option>
-                    <option value={booleanToString(false)}>No</option>
-                  </select>
+                  {id === todoId ? (
+                    <input
+                      type="text"
+                      value={todoTitle}
+                      onChange={(e) => setTodoTitle(e.target.value)}
+                      className="px-4 py-2 mx-auto my-6 text-black rounded-md"
+                    />
+                  ) : (
+                    title
+                  )}
+                </td>
+
+                <td>
+                  {id === todoId ? (
+                    <select
+                      value={todoCompleted ? "true" : "false"}
+                      onChange={(e) =>
+                        setTodoCompleted(
+                          e.target.value === "true" ? true : false
+                        )
+                      }
+                      className="text-black"
+                    >
+                      <option value="true">Yes</option>
+                      <option value="false">No</option>
+                    </select>
+                  ) : completed ? (
+                    "Yes"
+                  ) : (
+                    "No"
+                  )}
                 </td>
                 <td>
-                  <button>Edit</button>
+                  {id === todoId ? (
+                    <button onClick={() => handleDone(id)}>Done</button>
+                  ) : (
+                    <button
+                      onClick={() =>
+                        handleEdit({ userId, id, title, completed })
+                      }
+                    >
+                      Edit
+                    </button>
+                  )}
                 </td>
               </tr>
             ))}
